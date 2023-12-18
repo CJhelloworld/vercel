@@ -7,9 +7,9 @@
 		3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 4.0, 4.1, 4.2
 	],
 	"initialAmount": {
-		"primogem": 8000,
-		"fates": 25,
-		"genesis": 0,
+		"primogem": 10000,
+		"fates": 10000,
+		"genesis": 10000,
 		"shareReward": 16000
 	},
 	"welkinReward": {

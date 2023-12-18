@@ -11,6 +11,10 @@ import {
 } from './itemdrop-base';
 import { getRate, prob } from './probabilities';
 
+const getNameList = () => {
+	return get3StarItem().filter(({ weaponType }) => weaponType == 'sword');
+};
+
 const fatepoint = {
 	init({ version, phase, featured, fatesystemON }) {
 		this._fatesystemON = fatesystemON;
@@ -62,9 +66,18 @@ const weaponWish = {
 	get(rarity) {
 		// 3 star items
 		if (rarity === 3) {
-			const droplist = get3StarItem();
+			const droplist = getNameList();
 			return rand(droplist);
 		}
+		if (rarity === 4) {
+			const droplist = getNameList();
+			return rand(droplist);
+		}
+		if (rarity === 5) {
+			const droplist = getNameList();
+			return rand(droplist);
+		}
+
 
 		// 4 star items (Character or Weapon)
 		if (rarity === 4) {

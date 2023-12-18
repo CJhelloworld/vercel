@@ -170,7 +170,7 @@
 		class="uid"
 		title="Try Your Luck by this Simulator"
 	>
-		WishSimulator.App
+	
 	</a>
 </main>
 

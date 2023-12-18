@@ -8,6 +8,10 @@ import {
 	checkGuaranteed
 } from './itemdrop-base';
 
+const getNameList = () => {
+	return get3StarItem().filter(({ weaponType }) => weaponType == 'polearm');
+};
+
 const characterWish = {
 	init({ indexOfBanner, featured, rateup, version, phase, stdver }) {
 		this._featured = featured;
@@ -21,7 +25,15 @@ const characterWish = {
 
 	get(rarity) {
 		if (rarity === 3) {
-			const droplist = get3StarItem();
+			const droplist = getNameList();
+			return rand(droplist);
+		}
+		if (rarity === 4) {
+			const droplist = getNameList();
+			return rand(droplist);
+		}
+		if (rarity === 5) {
+			const droplist = getNameList();
 			return rand(droplist);
 		}
 
